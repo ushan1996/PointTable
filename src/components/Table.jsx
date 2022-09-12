@@ -1,38 +1,56 @@
 import React from 'react'
-import styled, { ThemeProvider } from "styled-components";
-const Tablee = styled.table`
-    border: 2px solid black;
-    width: 100%;
-    height: 200px;
-`;
+import "./table.css";
+
+
 function Table() {
     const data = [
-        { name: "Anom", age: 19, gender: "Male" },
-        { name: "Megha", age: 19, gender: "Female" },
-        { name: "Subham", age: 25, gender: "Male"},
+        { name: "Anom", randomnumber: 19, link: "https://create-react-app.dev/docs/getting-started/" , point: "32" },
+        { name: "Megha", randomnumber: 19, link: "Female" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
+        { name: "Subham", randomnumber: 25, link: "Male" , point: "32" },
       ]
   return (
-    <div>
-    <Container>
-     <Tablee>
+    <div className='root'> 
+    
+    <div className="header"><h1>Task 1</h1></div>
+    <div className='container'> 
+     <table>
         <tr>
           <th>Name</th>
           <th>Random</th>
-          <th>Link</th>
-          <th>Point</th>
+          <th >Link</th>
+          <th className='colpoint'>Point</th>
         </tr>
         {data.map((val, key) => {
           return (
             <tr key={key}>
               <td>{val.name}</td>
-              <td>{val.age}</td>
-              <td>{val.gender}</td>
-              <td>{val.gender}</td>
+              <td>{val.randomnumber}</td>
+              <td><a href={val.link}>{val.link}</a> </td>
+              <td className='inputpoints'><input type="text" />&nbsp;&nbsp;&nbsp;<input type="submit" /> </td>
             </tr>
           )
         })}
-      </Tablee>
-      </Container>
+      </table>
+    </div>
     </div>
   )
 }
